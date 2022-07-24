@@ -1,10 +1,3 @@
-//
-//  Font+Extensions.swift
-//  my-store
-//
-//  Created by Danilo Camarotto on 18/07/2022.
-//
-
 import SwiftUI
 
 extension Font {
