@@ -66,8 +66,9 @@ class BagViewModel: ObservableObject {
     func addProduct() {
         let product = Product(id: 1,
                 title: "Cotton Jacket",
-                description: "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions",
                 price: 55.99,
+                description: "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions",
+                category: "men's clothing",
                 image: "cottom-jacket")
         let bagItem = BagProduct(product: product, quantity: 1)
         append(bagItem)

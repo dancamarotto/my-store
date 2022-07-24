@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81234330288D5C6E0082571E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8123432F288D5C6D0082571E /* WelcomeView.swift */; };
+		81234332288DCBA60082571E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81234331288DCBA60082571E /* NotificationView.swift */; };
+		81234335288DF2890082571E /* DCUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 81234334288DF2890082571E /* DCUtils */; };
+		812E37D92889D0E20037D1B6 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E37D82889D0E20037D1B6 /* ExploreViewModel.swift */; };
+		812E37E12889FBCD0037D1B6 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E37E02889FBCD0037D1B6 /* Navigation.swift */; };
+		812E37E3288A087D0037D1B6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E37E2288A087D0037D1B6 /* ExploreView.swift */; };
 		816365F32884AAF60053695B /* my_storeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816365F22884AAF60053695B /* my_storeApp.swift */; };
 		816365F52884AAF60053695B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816365F42884AAF60053695B /* HomeView.swift */; };
 		816365F72884AAF90053695B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816365F62884AAF90053695B /* Assets.xcassets */; };
@@ -43,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8123432F288D5C6D0082571E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		81234331288DCBA60082571E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		812E37D82889D0E20037D1B6 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		812E37E02889FBCD0037D1B6 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		812E37E2288A087D0037D1B6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		816365EF2884AAF60053695B /* my-store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		816365F22884AAF60053695B /* my_storeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_storeApp.swift; sourceTree = "<group>"; };
 		816365F42884AAF60053695B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -69,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81234335288DF2890082571E /* DCUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +101,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8123432E288D5C3E0082571E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8123432F288D5C6D0082571E /* WelcomeView.swift */,
+				81234331288DCBA60082571E /* NotificationView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		812E37D72889D0D00037D1B6 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				812E37D82889D0E20037D1B6 /* ExploreViewModel.swift */,
+				812E37E2288A087D0037D1B6 /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		816365E62884AAF60053695B = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +195,10 @@
 		8163661E2884AB300053695B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				812E37E02889FBCD0037D1B6 /* Navigation.swift */,
+				8123432E288D5C3E0082571E /* Onboarding */,
 				81FC8A9528859AC800FD946F /* Home */,
+				812E37D72889D0D00037D1B6 /* Explore */,
 				81FC8A9628859AD000FD946F /* Bag */,
 			);
 			path = Scenes;
@@ -250,6 +283,9 @@
 			dependencies = (
 			);
 			name = "my-store";
+			packageProductDependencies = (
+				81234334288DF2890082571E /* DCUtils */,
+			);
 			productName = "my-store";
 			productReference = 816365EF2884AAF60053695B /* my-store.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +358,9 @@
 				Base,
 			);
 			mainGroup = 816365E62884AAF60053695B;
+			packageReferences = (
+				81234333288DF2890082571E /* XCRemoteSwiftPackageReference "DCUtils" */,
+			);
 			productRefGroup = 816365F02884AAF60053695B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,13 +403,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812E37E3288A087D0037D1B6 /* ExploreView.swift in Sources */,
+				812E37D92889D0E20037D1B6 /* ExploreViewModel.swift in Sources */,
 				816365F52884AAF60053695B /* HomeView.swift in Sources */,
+				81234332288DCBA60082571E /* NotificationView.swift in Sources */,
 				816365F32884AAF60053695B /* my_storeApp.swift in Sources */,
 				81E3E08528873B5F001BA1AC /* Product.swift in Sources */,
 				81FC8A942885968B00FD946F /* Font+Extensions.swift in Sources */,
 				81E3E08128872820001BA1AC /* BagViewModel.swift in Sources */,
 				81FC8A922885966700FD946F /* Date+Extensions.swift in Sources */,
 				81E3E08928873C31001BA1AC /* PreviewProvider+Extensions.swift in Sources */,
+				812E37E12889FBCD0037D1B6 /* Navigation.swift in Sources */,
+				81234330288D5C6E0082571E /* WelcomeView.swift in Sources */,
 				81FC8A9828859AE900FD946F /* BagView.swift in Sources */,
 				81FC8A9A2885A01300FD946F /* EmptyBagView.swift in Sources */,
 				81E3E08728873B7D001BA1AC /* BagProduct.swift in Sources */,
@@ -699,6 +743,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81234333288DF2890082571E /* XCRemoteSwiftPackageReference "DCUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dancamarotto/DCUtils.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81234334288DF2890082571E /* DCUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81234333288DF2890082571E /* XCRemoteSwiftPackageReference "DCUtils" */;
+			productName = DCUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 816365E72884AAF60053695B /* Project object */;
 }

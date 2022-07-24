@@ -9,13 +9,9 @@ import SwiftUI
 
 @main
 struct my_storeApp: App {
-    
-    let vm = BagViewModel()
-    
     var body: some Scene {
         WindowGroup {
-//            HomeView()
-            BagView(vm: vm)
+            WelcomeView()
         }
     }
 }

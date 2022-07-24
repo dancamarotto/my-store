@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "dcutils",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dancamarotto/DCUtils.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0eb4b45a05dee594bdf7989172b0f5bc1496079d"
+      }
+    }
+  ],
+  "version" : 2
+}
