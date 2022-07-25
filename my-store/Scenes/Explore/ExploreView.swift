@@ -1,15 +1,20 @@
 import SwiftUI
 
 struct ExploreView: View {
-//    let exploreViewModel = ExploreViewModel()
+    @ObservedObject var vm = ExploreViewModel()
     
     var body: some View {
-        Text("Explore")
+        Text(vm.products.first?.title ?? "nil")
+            .onAppear {
+                vm.fetchProducts()
+            }
     }
 }
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreView()
+        NavigationView {
+            ExploreView()
+        }
     }
 }

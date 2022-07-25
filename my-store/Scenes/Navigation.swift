@@ -1,38 +1,51 @@
 import SwiftUI
 
+enum Tabs: String {
+    case discover = "Discover"
+    case explorer = "Explorer"
+    case bag = "Bag"
+    case profile = "Profile"
+}
+
 struct Navigation: View {
-    let bagViewModel = BagViewModel()
+    @State var selectedTab = Tabs.discover
     
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             HomeView()
+                .tag(Tabs.discover)
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
             
-            Text("Shop")
+            ExploreView()
+                .tag(Tabs.explorer)
                 .tabItem {
                     Label("Shop", systemImage: "magnifyingglass")
                 }
             
-            NavigationView {
-                BagView(vm: bagViewModel)
-            }
-            .tabItem {
-                Label("Bag", systemImage: "bag")
-            }
+            BagView()
+                .tag(Tabs.bag)
+                .tabItem {
+                    Label("Bag", systemImage: "bag")
+                }
             
             Text("Profile")
+                .tag(Tabs.profile)
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")
                 }
         }
         .accentColor(.black)
+        .navigationTitle(selectedTab.rawValue)
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct NavigationController_Previews: PreviewProvider {
     static var previews: some View {
-        Navigation()
+        NavigationView {
+            Navigation()
+        }
     }
 }

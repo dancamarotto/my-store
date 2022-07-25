@@ -5,14 +5,6 @@ struct HomeView: View {
         ScrollView {
             VStack {
                 HStack {
-                    Text("Discover")
-                        .fontWeight(.medium)
-                        .font(.avenirNext(size: 20))
-                        .padding(.leading)
-                    Spacer()
-                }
-                .padding(.top)
-                HStack {
                     let date = Date()
                     Text("\(date.weekday), \(date.today) \(date.month)")
                         .padding(.leading)
@@ -83,6 +75,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        NavigationView {
+            HomeView()
+                .navigationTitle("Discover")
+        }
     }
 }

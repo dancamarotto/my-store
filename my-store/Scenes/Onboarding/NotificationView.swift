@@ -24,10 +24,18 @@ struct NotificationView: View {
                 .frame(maxWidth: .infinity)
             
             HStack(spacing: 10) {
-                Text("Not now")
-                    .style(.light)
-                Text("Yes, Notify me")
-                    .style(.dark)
+                NavigationLink {
+                    Navigation()
+                } label: {
+                    Text("Not now")
+                        .style(.light)
+                }
+                NavigationLink {
+                    Navigation()
+                } label: {
+                    Text("Yes, Notify me")
+                        .style(.dark)
+                }
             }
             .padding()
         }

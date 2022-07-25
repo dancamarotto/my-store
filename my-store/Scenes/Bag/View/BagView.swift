@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BagView: View {
-    @ObservedObject var vm: BagViewModel
+    @ObservedObject var vm = BagViewModel()
     
     var body: some View {
         VStack {
@@ -25,7 +25,7 @@ struct BagView: View {
                     .cornerRadius(50)
                     .padding([.leading, .trailing, .bottom])
             }
-        }.navigationTitle("Bag")
+        }
     }
 }
 
